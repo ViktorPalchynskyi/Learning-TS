@@ -1,11 +1,6 @@
 // to compile need to set tsc globally by "npm install -g typescript" and use tsc variables.ts
-
-
-let moviewTitle: string = 'Amadeus';
-
+var moviewTitle = 'Amadeus';
 moviewTitle = 'Arrival';
-
-let numCatLives: number = 9;
+var numCatLives = 9;
 numCatLives++;
-
-let gameOver: boolean = false;
+var gameOver = false;
