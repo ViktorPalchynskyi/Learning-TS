@@ -20,3 +20,6 @@ function square(num: number): number {
 }
 
 const add = (x: number, y: number): number => x + y;
+const colors = ['red', 'orange', 'yellow'];
+
+colors.map((color) => color.toUpperCase());
