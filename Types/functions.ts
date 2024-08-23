@@ -2,7 +2,7 @@ function square(num: number) {
     return num * num;
 }
 
-function greet(person: string) {
+function greet(person: string = 'stranger') {
     return `Hi there, ${person}`;
 }
 
@@ -11,3 +11,6 @@ const doSomething = (
     age: number,
     isFunny: boolean
 ) => {};
+
+greet();
+console.log(greet('Viktor'));
