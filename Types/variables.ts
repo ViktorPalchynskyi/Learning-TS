@@ -22,3 +22,13 @@ isFunny = true;
 // thing = false;
 // thing();
 // thing.toUpperCase();
+
+const movies = ['Arrival', 'The Thing', 'Aliens', 'Amadeus'];
+
+let founMovie: string;
+
+for (const movie of movies) {
+    if (movie === 'Amadeus') {
+        founMovie = 'Amadeus';
+    }
+}
