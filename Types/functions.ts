@@ -23,3 +23,7 @@ const add = (x: number, y: number): number => x + y;
 const colors = ['red', 'orange', 'yellow'];
 
 colors.map((color) => color.toUpperCase());
+
+function printMessage(msg: string): void {
+    console.log(msg);
+}
