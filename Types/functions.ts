@@ -27,3 +27,13 @@ colors.map((color) => color.toUpperCase());
 function printMessage(msg: string): void {
     console.log(msg);
 }
+
+function makeError(msg: string): never {
+    throw new Error(msg);
+}
+
+function gameLoop(): never {
+    while (true) {
+        console.log('Endless game loop');
+    }
+}
