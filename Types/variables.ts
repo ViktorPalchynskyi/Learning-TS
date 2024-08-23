@@ -11,8 +11,14 @@ let gameOver: boolean = false;
 
 let tvShow = 'Olover Kitteridge';
 tvShow = 'The Ohter Two';
-tvShow = false;
+// tvShow = false;
 
 let isFunny = false;
 isFunny = true;
-isFunny = 22;
+// isFunny = 22;
+
+// let thing: any = 'hello';
+// thing = 1;
+// thing = false;
+// thing();
+// thing.toUpperCase();
