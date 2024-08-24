@@ -3,14 +3,14 @@ const users: Array<string> = [];
 
 activeUsers.push('Viktor');
 
-type Point = {
-    x: number;
-    y: number;
-};
+// type Point = {
+//     x: number;
+//     y: number;
+// };
 
-const coords: Array<Point> = [];
+// const coords: Array<Point> = [];
 
-coords.push({ x: 44, y: 22 });
+// coords.push({ x: 44, y: 22 });
 
 const board: Array<Array<string>> = [
     ['X', 'O', 'X'],
