@@ -18,6 +18,24 @@ function randomCoordiname(): Poin {
     };
 }
 
+type Song = {
+    title: string;
+    artist: string;
+    numStreams: number;
+    credits: {
+        producer: string;
+        writer: string;
+    };
+};
+
 function doublePoint(poin: Poin): Poin {
     return { x: poin.x * 2, y: poin.y * 2 };
+}
+
+function calculatePayout(song: Song): number {
+    return song.numStreams * 0.0033;
+}
+
+function printSong(song: Song): void {
+    console.log(`${song.title} - ${song.artist}`);
 }
