@@ -42,3 +42,15 @@ function printSong(song: Song): void {
 }
 
 const myPoint: Poin = { x: 24, y: 42, z: 44 };
+
+type User = {
+    readonly id: number;
+    name: string;
+};
+
+const user: User = {
+    id: 42123,
+    name: 'catgirl',
+};
+
+user.id = 223;
