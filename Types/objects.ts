@@ -96,3 +96,17 @@ const himera: CatDogAnimal = {
     isAlive: true,
     isMamel: true,
 };
+
+// type ID = {
+//     readonly id: string;
+//     type: string;
+// };
+
+// type IDnum = {
+//     id: number;
+//     type: number;
+// };
+
+// type IDnew = ID & IDnum;
+
+// const id: IDnew = {}

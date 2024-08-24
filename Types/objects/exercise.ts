@@ -5,7 +5,7 @@ type BoxOffice = {
 };
 
 type Movie = {
-    title: string;
+    readonly title: string;
     originalTitle?: string;
     director: string;
     releaseYear: number;
@@ -34,3 +34,7 @@ const cats: Movie = {
         grossWorldwide: 73833348,
     },
 };
+
+function getProfit(movie: Movie): number {
+    return movie.boxOffice.grossWorldwide - movie.boxOffice.budget;
+}
