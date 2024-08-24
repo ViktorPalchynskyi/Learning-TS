@@ -53,4 +53,46 @@ const user: User = {
     name: 'catgirl',
 };
 
-user.id = 223;
+// user.id = 223;
+
+type Circle = {
+    radius: number;
+};
+
+type Colorful = {
+    color: string;
+};
+
+type ColorfulCircle = Circle & Colorful;
+
+const cc: ColorfulCircle = { radius: 19, color: 'red' };
+
+type Cat = {
+    numLives: number;
+};
+
+type Dog = {
+    breed: string;
+};
+
+type Animal = {
+    color: string;
+    isAlive: boolean;
+    isMamel: boolean;
+};
+
+type CatDog = Cat &
+    Dog & {
+        age: number;
+    };
+
+type CatDogAnimal = CatDog & Animal;
+
+const himera: CatDogAnimal = {
+    numLives: 9,
+    breed: 'psina',
+    age: 22,
+    color: 'red',
+    isAlive: true,
+    isMamel: true,
+};
