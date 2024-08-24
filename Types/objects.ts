@@ -4,11 +4,20 @@ function printName(person: { first: string; second: string }): void {
 
 printName({ first: 'Viktor', second: 'Palchynskyi' });
 
-let coordiname: { x: number; y: number } = { x: 24, y: 2 };
+type Poin = {
+    x: number;
+    y: number;
+};
 
-function randomCoordiname(): { x: number; y: number } {
+let coordiname: Poin = { x: 24, y: 2 };
+
+function randomCoordiname(): Poin {
     return {
         x: Math.round(Math.random() * 100),
         y: Math.round(Math.random() * 100),
     };
+}
+
+function doublePoint(poin: Poin): Poin {
+    return { x: poin.x * 2, y: poin.y * 2 };
 }
