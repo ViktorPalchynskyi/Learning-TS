@@ -7,6 +7,7 @@ printName({ first: 'Viktor', second: 'Palchynskyi' });
 type Poin = {
     x: number;
     y: number;
+    z?: number;
 };
 
 let coordiname: Poin = { x: 24, y: 2 };
@@ -39,3 +40,5 @@ function calculatePayout(song: Song): number {
 function printSong(song: Song): void {
     console.log(`${song.title} - ${song.artist}`);
 }
+
+const myPoint: Poin = { x: 24, y: 42, z: 44 };
