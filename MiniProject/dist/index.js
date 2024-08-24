@@ -1,9 +1,17 @@
 "use strict";
 const btn = document.getElementById('btn');
 const input = document.getElementById('todoinput');
-btn.addEventListener('click', () => {
-    alert(input.value);
+const form = document.getElementById('todoform');
+const list = document.getElementById('todolist');
+const handleSubmit = (e) => {
+    e.preventDefault();
+    const newTodoText = input.value;
+    const newLI = document.createElement('li');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    newLI.append(newTodoText);
+    newLI.append(checkbox);
+    list.append(newLI);
     input.value = '';
-});
-const mystery = 'Hello world!!!';
-const numChars = mystery.length;
+};
+form.addEventListener('submit', handleSubmit);
