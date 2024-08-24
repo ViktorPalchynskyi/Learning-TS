@@ -9,7 +9,33 @@ interface Person {
     first: string;
     last: string;
     nickname?: string;
-    readonly age: number;
+    readonly id: number;
+    // sayHi: () => string;
+    sayHi(): string;
 }
 
-const thomas: Person = { first: 'Thomas', last: 'Hardy', age: 33 };
+const thomas: Person = {
+    first: 'Thomas',
+    last: 'Hardy',
+    id: 33,
+    sayHi() {
+        return 'Hi';
+    },
+};
+
+interface Product {
+    name: string;
+    price: number;
+    applyDiscount(discount: number): number;
+}
+
+const shoes: Product = {
+    name: 'Blue Suede Shoes',
+    price: 100,
+    applyDiscount(discount) {
+        const newPrice = this.price * (1 - discount);
+        this.price = newPrice;
+
+        return this.price;
+    },
+};
