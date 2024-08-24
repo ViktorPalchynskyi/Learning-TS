@@ -12,7 +12,7 @@ const responses: HTTPResponse[] = [
     [301, 'Redirect'],
 ];
 
-enum OrderStatus {
+const enum OrderStatus {
     PENDING,
     SHIPPED,
     DELIVERED,
@@ -27,7 +27,7 @@ function isDelivered(status: OrderStatus): boolean {
 
 isDelivered(OrderStatus.DELIVERED);
 
-enum ArrowKeys {
+const enum ArrowKeys {
     UP = 'up',
     DOWN = 'down',
     LEFT = 'left',
