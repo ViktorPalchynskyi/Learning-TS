@@ -1,3 +1,9 @@
 "use strict";
 const btn = document.getElementById('btn');
-btn.addEventListener('click', () => alert('Clicked'));
+const input = document.getElementById('todoinput');
+btn.addEventListener('click', () => {
+    alert(input.value);
+    input.value = '';
+});
+const mystery = 'Hello world!!!';
+const numChars = mystery.length;
