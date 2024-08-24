@@ -43,3 +43,22 @@ const stuff: (number | string)[] = ['string', 242];
 const coordinates: (Point | Loc)[] = [];
 coordinates.push({ lat: 42, long: 55 });
 coordinates.push({ x: 42, y: 55 });
+
+// let zero: 0 = 0;
+// zero = 22
+
+let hi: 'hi' = 'hi';
+
+let mood: 'happy' | 'sad' = 'happy';
+mood = 'sad';
+
+type DayOfWeek =
+    | 'Monday'
+    | 'Tuesday'
+    | 'Wednesday'
+    | 'Thursday'
+    | 'Friday'
+    | 'Saturday'
+    | 'Sunday';
+
+let today: DayOfWeek = 'Saturday';
