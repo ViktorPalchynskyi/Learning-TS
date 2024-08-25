@@ -3,6 +3,8 @@ interface Todo {
     completed: boolean;
 }
 
+const LOCAL_STORAGE_KEY = 'todos';
+
 const btn = document.getElementById('btn') as HTMLButtonElement;
 const input = document.getElementById(
     'todoinput'
@@ -10,7 +12,16 @@ const input = document.getElementById(
 const form = document.getElementById('todoform') as HTMLFormElement;
 const list = document.getElementById('todolist') as HTMLUListElement;
 
-const todos: Todo[] = [];
+const todos: Todo[] = readTodos();
+todos.forEach((todo) => craeteTodo(todo));
+
+function readTodos(): Todo[] {
+    const todosJSON = localStorage.getItem(LOCAL_STORAGE_KEY);
+
+    if (todosJSON === null) return [];
+
+    return JSON.parse(todosJSON);
+}
 
 const handleSubmit = (e: SubmitEvent) => {
     e.preventDefault();
@@ -18,8 +29,10 @@ const handleSubmit = (e: SubmitEvent) => {
         text: input.value,
         completed: false,
     };
-    todos.push(newTodo);
     craeteTodo(newTodo);
+    todos.push(newTodo);
+
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
 
     input.value = '';
 };
