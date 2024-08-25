@@ -23,6 +23,10 @@ function readTodos(): Todo[] {
     return JSON.parse(todosJSON);
 }
 
+function saveTodos(): void {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
+}
+
 const handleSubmit = (e: SubmitEvent) => {
     e.preventDefault();
     const newTodo: Todo = {
@@ -32,7 +36,7 @@ const handleSubmit = (e: SubmitEvent) => {
     craeteTodo(newTodo);
     todos.push(newTodo);
 
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
+    saveTodos();
 
     input.value = '';
 };
@@ -41,6 +45,13 @@ function craeteTodo(todo: Todo): void {
     const newLI = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
+    checkbox.checked = todo.completed;
+
+    checkbox.addEventListener('change', () => {
+        todo.completed = checkbox.checked;
+        saveTodos();
+    });
+
     newLI.append(todo.text);
     newLI.append(checkbox);
     list.append(newLI);
