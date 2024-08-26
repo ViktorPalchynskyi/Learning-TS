@@ -40,7 +40,7 @@ function getRandomElement<T>(arr: T[]): T {
 
 console.log(getRandomElement<number>([23, 4421, 42]));
 
-function merge<T, U>(object1: T, object2: U): T & U {
+function merge<T extends object, U extends object>(object1: T, object2: U): T & U {
     return {
         ...object1,
         ...object2,
@@ -48,3 +48,17 @@ function merge<T, U>(object1: T, object2: U): T & U {
 }
 
 const comboObj = merge({ name: 'some' }, { surname: 'any' });
+
+
+interface Lengthy {
+    length: number;
+}
+
+function printDoubleLength<T extends Lengthy>(thing: T): number {
+    return thing.length * 2;
+}
+
+console.log(printDoubleLength('string'));
+console.log(printDoubleLength([24,52]));
+// console.log(printDoubleLength(24));
+
