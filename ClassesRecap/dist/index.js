@@ -20,10 +20,10 @@
 //     }
 // }
 class Player {
-    constructor(first, last, score = 0) {
+    constructor(first, last, _score = 0) {
         this.first = first;
         this.last = last;
-        this.score = score;
+        this._score = _score;
         // public readonly first: string;
         // public readonly last: string;
         // public score: number = 0;
@@ -34,6 +34,27 @@ class Player {
     }
     showInfo() {
         console.log(`${this.first} ${this.last} have score: ${this.score} and have id: ${this.secretMethod()}`);
+    }
+    get fullName() {
+        return `${this.first} ${this.last}`;
+    }
+    get score() {
+        return this._score;
+    }
+    set score(value) {
+        if (value < 0) {
+            throw Error('Score cannot be negartive');
+        }
+        this._score = value;
+    }
+}
+class SuperPlayer extends Player {
+    constructor() {
+        super(...arguments);
+        this.isAdmin = true;
+    }
+    maxScore() {
+        this._score = 999999;
     }
 }
 const player = new Player('Carl', 'Jonson');

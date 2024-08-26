@@ -31,7 +31,7 @@ class Player {
     constructor(
         public readonly first: string,
         public readonly last: string,
-        private score: number = 0,
+        protected _score: number = 0
     ) {}
 
     private secretMethod(): string {
@@ -44,6 +44,30 @@ class Player {
                 this.score
             } and have id: ${this.secretMethod()}`
         );
+    }
+
+    public get fullName(): string {
+        return `${this.first} ${this.last}`;
+    }
+
+    public get score(): number {
+        return this._score;
+    }
+
+    public set score(value: number) {
+        if (value < 0) {
+            throw Error('Score cannot be negartive');
+        }
+
+        this._score = value;
+    }
+}
+
+class SuperPlayer extends Player {
+    public isAdmin: boolean = true;
+
+    public maxScore() {
+        this._score = 999999;
     }
 }
 
