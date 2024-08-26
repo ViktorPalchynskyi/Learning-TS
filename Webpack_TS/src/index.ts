@@ -1,5 +1,6 @@
 // webpack intsll  npm install --save-dev webpack webpack-cli typescript ts-loader
 // webpack dev server npm install --save-dev webpack-dev-server
+// clean webpack plugin npm install --save-dev clean-webpack-plugin
 
 import Dog from './Dog';
 import ShelterDog from './ShelterDog';
