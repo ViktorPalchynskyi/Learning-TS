@@ -50,3 +50,19 @@ function makeNoise(animal) {
     }
     return 'Gav';
 }
+function getFarmAnimalSound(animal) {
+    switch (animal.kind) {
+        case 'pig':
+            return 'Hryu';
+        case 'rooter':
+            return 'Coocarecoo';
+        case 'cow':
+            return 'Muu';
+    }
+}
+console.log(getFarmAnimalSound({
+    name: 'Stevie',
+    weight: 2,
+    age: 1.5,
+    kind: 'rooter',
+}));

@@ -83,3 +83,46 @@ function makeNoise(animal: Cat | Dog): string {
 
     return 'Gav';
 }
+
+interface Rooster {
+    name: string;
+    weight: number;
+    age: number;
+    kind: 'rooter';
+}
+
+interface Cow {
+    name: string;
+    weight: number;
+    age: number;
+    kind: 'cow';
+}
+
+interface Pig {
+    name: string;
+    weight: number;
+    age: number;
+    kind: 'pig';
+}
+
+type FarmAnimal = Pig | Rooster | Cow;
+
+function getFarmAnimalSound(animal: FarmAnimal): string {
+    switch (animal.kind) {
+        case 'pig':
+            return 'Hryu';
+        case 'rooter':
+            return 'Coocarecoo';
+        case 'cow':
+            return 'Muu';
+    }
+}
+
+console.log(
+    getFarmAnimalSound({
+        name: 'Stevie',
+        weight: 2,
+        age: 1.5,
+        kind: 'rooter',
+    })
+);
