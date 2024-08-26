@@ -38,3 +38,8 @@ function printDoubleLength(thing) {
 console.log(printDoubleLength('string'));
 console.log(printDoubleLength([24, 52]));
 // console.log(printDoubleLength(24));
+function makeEmptyList() {
+    return [];
+}
+const string = makeEmptyList();
+const number = makeEmptyList();
