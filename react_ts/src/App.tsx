@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import ShopingList from './components/ShopingList/ShopingList';
 import { Item } from './types';
+import ShoppingListForm from './components/ShoppingListForm/ShoppingListForm';
 
 
 
@@ -15,6 +16,7 @@ function App() {
     return (
         <div className="App">
           <ShopingList items={items}/>
+          <ShoppingListForm />
         </div>
     );
 }
