@@ -53,3 +53,11 @@ function getRuntime(media: Movie | TVSHow): number {
 
     return media.duration;
 }
+
+function printFullDate(date: string | Date): string {
+    if (date instanceof Date) {
+        return date.toUTCString();
+    }
+
+    return new Date(date).toUTCString();
+}

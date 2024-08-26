@@ -35,3 +35,9 @@ function getRuntime(media) {
     }
     return media.duration;
 }
+function printFullDate(date) {
+    if (date instanceof Date) {
+        return date.toUTCString();
+    }
+    return new Date(date).toUTCString();
+}
