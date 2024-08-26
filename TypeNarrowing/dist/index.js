@@ -41,3 +41,12 @@ function printFullDate(date) {
     }
     return new Date(date).toUTCString();
 }
+function isCat(animal) {
+    return animal.numLives !== undefined;
+}
+function makeNoise(animal) {
+    if (isCat(animal)) {
+        return 'Meow';
+    }
+    return 'Gav';
+}
