@@ -30,3 +30,14 @@ function identity<T>(item: T): T {
 
 identity<string>('string');
 identity<number>(24);
+
+function getRandomElement<T>(arr: T[]): T {
+    const randInd = Math.floor(Math.random() * arr.length);
+    console.log(randInd);
+
+    return arr[randInd];
+}
+
+console.log(
+    getRandomElement<number>([23, 4421, 42])
+);
