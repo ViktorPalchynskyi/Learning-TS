@@ -1,4 +1,6 @@
 import axios from 'axios';
+// to load types separately use npm install --save-dev @types/node
+import _ from 'lodash';
 
 interface User {
     id: number;
