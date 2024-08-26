@@ -34,3 +34,22 @@ function someDemo(x: string | number, y: string | boolean): void {
 
     console.log(x, y);
 }
+
+interface Movie {
+    title: string;
+    duration: number;
+}
+
+interface TVSHow {
+    title: string;
+    numEpisodes: number;
+    episodeDuration: number;
+}
+
+function getRuntime(media: Movie | TVSHow): number {
+    if ('numEpisodes' in media) {
+        return media.numEpisodes * media.episodeDuration;
+    }
+
+    return media.duration;
+}

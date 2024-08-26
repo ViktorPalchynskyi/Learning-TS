@@ -29,3 +29,9 @@ function someDemo(x, y) {
     }
     console.log(x, y);
 }
+function getRuntime(media) {
+    if ('numEpisodes' in media) {
+        return media.numEpisodes * media.episodeDuration;
+    }
+    return media.duration;
+}
