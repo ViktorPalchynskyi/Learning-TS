@@ -59,5 +59,17 @@ class SuperPlayer extends Player {
 }
 const player = new Player('Carl', 'Jonson');
 player.showInfo();
-// player.secretMethod()
-// player.id
+class Bike {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Jacker {
+    constructor(color, brand) {
+        this.color = color;
+        this.brand = brand;
+    }
+    print() {
+        console.log(`This ${this.brand} jacket have a ${this.color} color`);
+    }
+}

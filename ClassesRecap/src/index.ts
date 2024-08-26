@@ -76,3 +76,25 @@ const player = new Player('Carl', 'Jonson');
 player.showInfo();
 // player.secretMethod()
 // player.id
+
+interface Printable {
+    print(): void;
+}
+
+interface Colorful {
+    color: string;
+}
+
+class Bike implements Colorful {
+    constructor(public color: string) {}
+}
+
+class Jacker implements Colorful, Printable {
+    constructor(public color: string, public brand: string) {}
+
+    print(): void {
+        console.log(
+            `This ${this.brand} jacket have a ${this.color} color`
+        );
+    }
+}
