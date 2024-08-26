@@ -38,6 +38,13 @@ function getRandomElement<T>(arr: T[]): T {
     return arr[randInd];
 }
 
-console.log(
-    getRandomElement<number>([23, 4421, 42])
-);
+console.log(getRandomElement<number>([23, 4421, 42]));
+
+function merge<T, U>(object1: T, object2: U): T & U {
+    return {
+        ...object1,
+        ...object2,
+    };
+}
+
+const comboObj = merge({ name: 'some' }, { surname: 'any' });

@@ -28,3 +28,7 @@ function getRandomElement(arr) {
     return arr[randInd];
 }
 console.log(getRandomElement([23, 4421, 42]));
+function merge(object1, object2) {
+    return Object.assign(Object.assign({}, object1), object2);
+}
+const comboObj = merge({ name: 'some' }, { surname: 'any' });
