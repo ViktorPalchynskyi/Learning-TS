@@ -3,18 +3,15 @@ import './App.css';
 import ShopingList from './components/ShopingList/ShopingList';
 import { Item } from './types';
 import ShoppingListForm from './components/ShoppingListForm/ShoppingListForm';
+import { v4 as getId } from 'uuid';
 
 function App() {
     const [items, setItem] = useState<Item[]>([]);
 
     const addItem = (product: string) => {
-      console.log(product);
+        console.log(product);
+        setItem([...items, { id: getId(), product, quantity: 1 }]);
     };
-
-    //   const items = [
-    //     { id: 1, product: 'Lemon', quantity: 3 },
-    //     { id: 2, product: 'Banana', quantity: 3 },
-    // ];
 
     return (
         <div className="App">
