@@ -73,3 +73,37 @@ class Jacker {
         console.log(`This ${this.brand} jacket have a ${this.color} color`);
     }
 }
+class Employee {
+    constructor(first, last) {
+        this.first = first;
+        this.last = last;
+    }
+    greet() {
+        console.log(`${this.first} ${this.last}`);
+    }
+}
+class FulltimeEmployee extends Employee {
+    constructor(first, last, salary) {
+        super(first, last);
+        this.first = first;
+        this.last = last;
+        this.salary = salary;
+    }
+    getPay() {
+        return this.salary;
+    }
+    work() {
+        console.log('Working');
+    }
+    eat() {
+        console.log('Eating');
+    }
+}
+class PartTimeEmployee extends Employee {
+    getPay() {
+        return 11;
+    }
+}
+const employee = new FulltimeEmployee('Viktor', 'Palchynskyi', 550000);
+employee.greet();
+employee.work();

@@ -98,3 +98,54 @@ class Jacker implements Colorful, Printable {
         );
     }
 }
+
+abstract class Employee {
+    constructor(public first: string, public last: string) {}
+
+    public abstract getPay(): number;
+
+    greet() {
+        console.log(`${this.first} ${this.last}`);
+    }
+}
+
+interface MyWorker {
+    work(): void;
+    eat(): void;
+}
+
+class FulltimeEmployee extends Employee implements MyWorker {
+    constructor(
+        public first: string,
+        public last: string,
+        private salary: number
+    ) {
+        super(first, last);
+    }
+
+    public getPay(): number {
+        return this.salary;
+    }
+
+    work(): void {
+        console.log('Working');
+    }
+
+    eat(): void {
+        console.log('Eating');
+    }
+}
+
+class PartTimeEmployee extends Employee {
+    public getPay(): number {
+        return 11;
+    }
+}
+
+const employee = new FulltimeEmployee(
+    'Viktor',
+    'Palchynskyi',
+    550000
+);
+employee.greet();
+employee.work();
