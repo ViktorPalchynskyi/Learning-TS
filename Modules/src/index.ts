@@ -1,3 +1,4 @@
-import { sample } from './utils';
+import { add, sample } from './utils.js';
 
-sample([21, 442, 42]);
+console.log(sample([21, 442, 42]));
+console.log(add(2, 4));

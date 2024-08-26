@@ -1,4 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const utils_1 = require("./utils");
-(0, utils_1.sample)([21, 442, 42]);
+import { add, sample } from './utils.js';
+console.log(sample([21, 442, 42]));
+console.log(add(2, 4));
