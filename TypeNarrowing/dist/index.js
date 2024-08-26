@@ -58,6 +58,11 @@ function getFarmAnimalSound(animal) {
             return 'Coocarecoo';
         case 'cow':
             return 'Muu';
+        case 'sheep':
+            return 'Baa';
+        default:
+            const _exhaustiveCheck = animal;
+            return _exhaustiveCheck;
     }
 }
 console.log(getFarmAnimalSound({
