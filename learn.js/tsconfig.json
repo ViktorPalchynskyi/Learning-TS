@@ -8,6 +8,8 @@
         "allowJs": true,
         "esModuleInterop": true,
         "isolatedModules": true,
-        "outDir": "./dir"
+        "outDir": "./dir",
+        "experimentalDecorators": true,
+        "declaration": true,
     }
 }
