@@ -1,0 +1,10 @@
+"use strict";
+
+let unknownLet = {
+  a: '24'
+};
+
+// unknownLet.a;
+
+// let some: number = unknownLet;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJ1bmtub3duTGV0IiwiYSJdLCJzb3VyY2VzIjpbIi4uL3NyYy91bmtub3duLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImxldCB1bmtub3duTGV0OiB1bmtub3duID0geyBhOiAnMjQnIH07XG5cbi8vIHVua25vd25MZXQuYTtcblxuLy8gbGV0IHNvbWU6IG51bWJlciA9IHVua25vd25MZXQ7Il0sIm1hcHBpbmdzIjoiOztBQUFBLElBQUlBLFVBQW1CLEdBQUc7RUFBRUMsQ0FBQyxFQUFFO0FBQUssQ0FBQzs7QUFFckM7O0FBRUEiLCJpZ25vcmVMaXN0IjpbXX0=
