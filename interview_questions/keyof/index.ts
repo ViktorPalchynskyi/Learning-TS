@@ -18,6 +18,13 @@ namespace keyof {
     const userName = getProperty(user, 'name'); // string
     const userAge = getProperty(user, 'age'); // number
 
-    
     type UserType = typeof user;
+
+    const config = {
+        host: 'localhost',
+        port: 8080,
+        secure: false,
+    };
+
+    type ConfigKeys = keyof typeof config;
 }
