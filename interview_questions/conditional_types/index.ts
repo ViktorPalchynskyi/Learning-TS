@@ -20,3 +20,13 @@ type Flatten<T> = T extends any[] ? T[number] : T;
 
 type C = Flatten<{name: string}>;
 type D = Flatten<{name: string}[]>;
+
+type GetReturnType<T> = T extends (...args: any[]) => infer R ? R : never; 
+type Func = () => number;
+type FuncInfer = GetReturnType<Func>;
+
+type ElementType<T> = T extends (infer U)[] ? U : T; 
+type E = ElementType<string[]>;  // string
+type F = ElementType<number[]>;  // number
+type G = ElementType<boolean>;   // boolean
+
