@@ -18,5 +18,6 @@ namespace keyof {
     const userName = getProperty(user, 'name'); // string
     const userAge = getProperty(user, 'age'); // number
 
+    
     type UserType = typeof user;
 }
