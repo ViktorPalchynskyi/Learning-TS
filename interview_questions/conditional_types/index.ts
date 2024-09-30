@@ -30,3 +30,6 @@ type E = ElementType<string[]>;  // string
 type F = ElementType<number[]>;  // number
 type G = ElementType<boolean>;   // boolean
 
+
+type ToArray<T> = T extends any ? T[] : never;
+type H = ToArray<string | number>; // string[] | number[]
